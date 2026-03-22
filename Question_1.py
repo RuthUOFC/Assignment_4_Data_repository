@@ -1,5 +1,5 @@
 #The Gathering of Data
-# Our story begins by summoning the necessary tools and the dataset itself.
+# we begin  by summoning the necessary tools and the dataset itself.
 import numpy as np
 from sklearn.datasets import load_breast_cancer
 import pandas as pd
