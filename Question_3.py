@@ -41,13 +41,17 @@ print(f"Training Accuracy: {train_acc_c:.4f}")
 print(f"Test Accuracy:     {test_acc_c:.4f}")
 
 # --- STEP 5: IDENTIFYING THE LEAD CHARACTERS (Feature Importance) ---
-# Decision trees allow us to see which features were most useful for classification.
-importances = dt_constrained.feature_importances_feature_importance_df = pd.DataFrame({ 'Feature': feature_names,'Importance': importances
+# We must first extract the importance values into their own variable...
+importances = dt_constrained.feature_importances_
+
+# ...THEN we create the DataFrame to display them nicely!
+feature_importance_df = pd.DataFrame({
+    'Feature': feature_names,
+    'Importance': importances
 }).sort_values(by='Importance', ascending=False)
 
 print("\n--- Top 5 Most Important Features ---")
 print(feature_importance_df.head(5))
-
 # =============================================================================
 # ANALYTICAL DISCUSSION (Q3 ANSWERS)
 # =============================================================================
