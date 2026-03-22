@@ -43,10 +43,11 @@ Flatten(),
 Dense(units=10, activation='softmax')
 ])
 
-# --- STEP 5: MODEL COMPILATION ---
+# --- STEP 5: MODEL COMPILATION (CORRECTED) ---
+# We use 'sparse_categorical_crossentropy' as a plain string without any extra symbols.
 convolutional_neural_network_model.compile(
     optimizer='adam',
-    loss='$sparse_categorical$_crossentropy',
+    loss='sparse_categorical_crossentropy', # Removed the dollar signs!
     metrics=['accuracy']
 )
 
