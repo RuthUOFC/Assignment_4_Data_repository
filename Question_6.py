@@ -52,11 +52,7 @@ convolutional_neural_network_model.compile(
 
 # --- STEP 6: MODEL OPTIMIZATION (TRAINING) ---
 # We execute the training process for 15 epochs to allow the filters to converge.
-training_history = convolutional_neural_network_model.fit(
-training_images_reshaped,training_labels,
-epochs = 15,
-validation_split=0.1,
-verbose = 1
+training_history = convolutional_neural_network_model.fit(training_images_reshaped,training_labels,epochs = 15,validation_split=0.1,verbose = 1
 )
 
 # --- STEP 7: QUANTITATIVE PERFORMANCE EVALUATION ---
