@@ -57,7 +57,7 @@ print(feature_importance_df.head(5))
 # =============================================================================
 '''
 1. How does controlling model complexity affect overfitting?
-By introducing constraints like '$max_depth$', we prevent the tree from 
+By introducing constraints like 'max_depth', we prevent the tree from 
 creating "branches" for every minor variation or outlier in the training 
 data. This reduces the gap between Training and Test accuracy. While 
 Training Accuracy might drop slightly, the model becomes more robust 
